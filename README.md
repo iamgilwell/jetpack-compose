@@ -1,2 +1,2 @@
-# jetpack-compose
+# Jetpack Compose tuts 
 Random JetPack Compose tutorials
