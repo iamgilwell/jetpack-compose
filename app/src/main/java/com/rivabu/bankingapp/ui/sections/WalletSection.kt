@@ -1,4 +1,4 @@
-package com.rivabu.bankingapp
+package com.rivabu.bankingapp.ui.sections
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

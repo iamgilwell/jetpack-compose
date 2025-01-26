@@ -28,6 +28,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
+    }
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -35,6 +38,13 @@ android {
         compose = true
     }
 }
+//configurations.all {
+//    resolutionStrategy {
+//        force("androidx.compose.ui:ui-tooling:1.5.0")
+//        force("androidx.compose.ui:ui-tooling-data:1.5.0")
+//        force("androidx.compose.ui:ui-tooling-preview:1.5.0")
+//    }
+//}
 
 dependencies {
 
@@ -48,6 +58,19 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
     implementation("androidx.compose.material:material-icons-extended:1.7.6")
+
+    // Compose UI
+    implementation("androidx.compose.ui:ui:1.7.6")
+    // Compose Material Design
+    implementation("androidx.compose.material:material:1.7.6")
+    // Compose Preview
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.6")
+    // Optional: Add Compose Tooling for debugging
+    implementation ("androidx.compose.ui:ui-tooling")
+    implementation ("androidx.compose.ui:ui-tooling-preview")
+
+    debugImplementation("androidx.compose.ui:ui-tooling:1.7.6")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

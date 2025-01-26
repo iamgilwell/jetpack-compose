@@ -12,15 +12,18 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.rivabu.bankingapp.ui.theme.BankingAppTheme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.rivabu.bankingapp.ui.sections.CardSection
+import com.rivabu.bankingapp.ui.sections.CurrenciesSection
+import com.rivabu.bankingapp.ui.sections.FinanceSection
+import com.rivabu.bankingapp.ui.sections.WalletSection
+import com.rivabu.bankingapp.ui.theme.BankingAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +53,7 @@ class MainActivity : ComponentActivity() {
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun HomeScreen() {
     Scaffold(bottomBar = {
@@ -61,11 +64,11 @@ fun HomeScreen() {
                 .fillMaxSize()
                 .padding(padding)
         ) {
-             WalletSection()
-             CardSection()
+            WalletSection()
+            CardSection()
             Spacer(modifier = Modifier.padding(16.dp))
-            // FinanceSection()
-            // CurrenciesSection() }
+            FinanceSection()
+            CurrenciesSection()
         }
     }
 }
